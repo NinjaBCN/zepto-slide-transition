@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Demo zepto plugin : slide transition</title>
+        <style>
+            input { display: block; }
+        </style>
+    </head>
+    <body>
+        <h1>Demo zepto plugin : slide transition</h1>
+        
+        <!-- SlideDown -->
+        <h2>SlideDown</h2>
+        <input type="button" value="Show" id="slideDown-button" />
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam, ligula eget scelerisque 
+            adipiscing, orci est pulvinar nisi, sit amet posuere elit lectus vitae arcu. Duis tincidunt, 
+            dolor vitae porta imperdiet, erat dolor dapibus enim, non mollis sem nisi vel eros. Praesent 
+            nunc neque, pellentesque at suscipit non, eleifend nec libero. Vestibulum rhoncus pharetra 
+            imperdiet. Ut nibh ligula, gravida in sagittis cursus, semper ut orci. Phasellus euismod augue 
+            vel elit imperdiet ut rhoncus ante pretium. Etiam in mauris sed ante malesuada semper quis vel 
+            dui. Phasellus eu tempor elit. Quisque ut nunc a tellus faucibus porta in non orci.
+        </p>
+
+        
+        <!-- SlideUp -->
+        <h2>SlideUp</h2>
+        <input type="button" value="Hide" id="slideUp-button" />
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam, ligula eget scelerisque 
+            adipiscing, orci est pulvinar nisi, sit amet posuere elit lectus vitae arcu. Duis tincidunt, 
+            dolor vitae porta imperdiet, erat dolor dapibus enim, non mollis sem nisi vel eros. Praesent 
+            nunc neque, pellentesque at suscipit non, eleifend nec libero. Vestibulum rhoncus pharetra 
+            imperdiet. Ut nibh ligula, gravida in sagittis cursus, semper ut orci. Phasellus euismod augue 
+            vel elit imperdiet ut rhoncus ante pretium. Etiam in mauris sed ante malesuada semper quis vel 
+            dui. Phasellus eu tempor elit. Quisque ut nunc a tellus faucibus porta in non orci.
+        </p>
+        
+        <!-- SlideToggle -->
+        <h2>SlideToggle</h2>
+        <input type="button" value="Hide/Show" id="slideToggle-button" />
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam, ligula eget scelerisque 
+            adipiscing, orci est pulvinar nisi, sit amet posuere elit lectus vitae arcu. Duis tincidunt, 
+            dolor vitae porta imperdiet, erat dolor dapibus enim, non mollis sem nisi vel eros. Praesent 
+            nunc neque, pellentesque at suscipit non, eleifend nec libero. Vestibulum rhoncus pharetra 
+            imperdiet. Ut nibh ligula, gravida in sagittis cursus, semper ut orci. Phasellus euismod augue 
+            vel elit imperdiet ut rhoncus ante pretium. Etiam in mauris sed ante malesuada semper quis vel 
+            dui. Phasellus eu tempor elit. Quisque ut nunc a tellus faucibus porta in non orci.
+        </p>
+        
+        
+        <!-- Zepto v1.0-1-ga3cab6c : http://zeptojs.com/ -->
+        <script src="zepto.min.js"></script>
+        
+        <!-- Zepto plugin : slide transition -->
+        <script src="zepto-slide-transition.js"></script>
+        <script>
+            $(document).ready(function(){
+            
+                // Hide the p element to slideDown it
+                $('#slideDown-button').next('p').hide();
+                
+                // SlideDown
+                $('#slideDown-button').click(function(){
+                    $('#slideDown-button').next('p').slideDown();
+                });
+                
+                // SlideUp
+                $('#slideUp-button').click(function(){
+                    $('#slideUp-button').next('p').slideUp();
+                });
+                
+                // SlideUp
+                $('#slideToggle-button').click(function(){
+                    $('#slideToggle-button').next('p').slideToggle();
+                });
+                
+            });
+        </script>
+    </body>
+</html>
